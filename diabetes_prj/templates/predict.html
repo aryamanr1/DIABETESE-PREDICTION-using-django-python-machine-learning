@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-6 mx-auto card p-3 shadow -lg">
+<h1 class=" mx-auto card p-3 shadow -lg">Welcome To Predict Page {{user|upper}}</h1> <br>
+<h3>CLICK HERE TO LOGOUT 
+ <a href="/logout/" class="align-center"><button class="btn btn-danger">logout</button></a></h3>
+</div>
+<form class="col-6 mx-auto card p-3 shadow -lg" method="post">
+    {% csrf_token %}
+    <label for="Pregnancies" class="Pregnancies">Pregnancies:</label>
+    <input type="number" id="Pregnancies" name="Pregnancies" required>
+    <br><br>
+    <label for="Glucose" class="Glucose">Glucose:</label>
+    <input type="number" id="Glucose" name="Glucose" required>
+    <br><br>
+    <label for="BloodPressure" class="BloodPressure">BloodPressure:</label>
+    <input type="number" id="BloodPressure" name="BloodPressure" required>
+    <br><br>
+    <label for="SkinThickness" class="SkinThickness">SkinThickness:</label>
+    <input type="number" id="SkinThickness" name="SkinThickness" required>
+    <br><br>
+    <label for="Insulin" class="Insulin">Insulin:</label>
+    <input type="number" id="Insulin" name="Insulin" required>
+    <br><br>
+    <label for="BMI" class="BMI">BMI:</label>
+    <input type="number" step=any id="BMI" name="BMI" required>
+    <br><br>
+    <label for="DiabetesPedigreeFunction" class="DiabetesPedigreeFunction">DiabetesPedigreeFunction:</label>
+    <input type="number" step=any id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required>
+    <br><br>
+    <label for="Age" class="Age">Age:</label>
+    <input type="number" id="Age" name="Age" required>
+    <br><br>
+    <input type="submit"class="btn btn-success" value="Predict">
+</form>
+{% endblock content %}

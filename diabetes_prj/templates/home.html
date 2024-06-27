@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-8 mx-auto card p-3 shadow -lg">
+<h1 class=" mx-auto card p-3 shadow -lg">Welcome To Home Page {{user|upper}}</h1> <br>
+<h3>CLICK HERE TO LOGOUT 
+ <a href="/logout/" class="align-center"><button class="btn btn-danger">logout</button></a></h3>
+</div>
+
+<div class="container col-8 p-2  text-black border border-5 rounded card " >
+    
+    
+       
+    <h1>GO TO PREDICT PAGE <a href="/predict/" ><button class="btn btn-primary">predict</button></a></h1>
+    <h3>About</h3>
+    <p>Created by Aryaman</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non suscipit tempora pariatur fugit excepturi, perferendis, aperiam commodi quo magnam perspiciatis, minus veniam iure quis maiores dolor impedit sed esse beatae?</p>
+    
+</div>
+{% endblock content %}

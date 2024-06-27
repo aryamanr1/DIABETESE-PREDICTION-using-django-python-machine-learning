@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container col-6 align-middle text-black border border-round card p-3 shadow-lg">
+<h1 style="align-items: center; text-align: center ;" class="col-6 mx-auto card p-3 shadow -lg">RESULT</h1>
+<h3>CLICK HERE TO LOGOUT 
+    <a href="/logout/" class="align-center"><button class="btn btn-danger">logout</button></a>
+</h3>
+</div>
+
+
+<div class="container col-6 mx-auto card p-3 shadow -lg ">
+<h1 style="align-items: center; text-align: center;">Diabetes Prediction Result:-</h1>
+<div class="container  align-middle text-black border border-round card p-3 shadow-lg">
+
+<h1 style="align-items: center; text-align: center;">{{user|upper}} {{result}}</h1><br></div>>
+<h1 style="align-items: center; text-align: center;">CLICK HERE TO GO TO PREDICT PAGE
+<a href="/predict/" class="align-center"><button class="btn btn-success">Predict</button></a></h1>
+</div>
+{% endblock content %}
